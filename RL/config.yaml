@@ -1,0 +1,38 @@
+training:
+  iterations: 30            # total training iterations
+  self_play_games: 50       # self-play games generated per iteration
+  min_buffer_samples: 1000  # min replay buffer size before training starts
+  eval_every: 5             # evaluate vs baselines every N iterations
+  eval_games: 50            # games per evaluation match
+ 
+mcts:
+  simulations: 200          # MCTS simulations per move
+  c_puct: 1.25              # exploration constant in PUCT formula
+  dirichlet_alpha: 0.3      # Dirichlet noise concentration (0.3 = Connect4 default)
+  dirichlet_epsilon: 0.25   # fraction of policy replaced by noise at root
+  temp_threshold: 30        # moves before temperature drops to temp_low
+  temp_high: 1.0            # exploration temperature (early game)
+  temp_low: 0.1             # exploitation temperature (late game)
+ 
+network:
+  in_channels: 8            # input planes (2 player planes + 6 history + 1 turn)
+  n_res_blocks: 6           # residual blocks in tower
+  n_filters: 128            # convolutional filters per layer
+  board_h: 6
+  board_w: 7
+  n_actions: 7              # one per column
+ 
+optimizer:
+  lr: 0.001                 # initial learning rate
+  weight_decay: 0.0001      # L2 regularization
+  batch_size: 512
+  epochs_per_iter: 5        # gradient steps per training iteration
+  max_grad_norm: 1.0        # gradient clipping
+ 
+replay_buffer:
+  capacity: 100000          # max stored (s, pi, z) tuples
+ 
+paths:
+  checkpoint_dir: results/checkpoints
+  plot_dir: results/plots
+  history_file: results/training_history.json

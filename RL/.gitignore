@@ -1,0 +1,35 @@
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+ 
+# Virtual envs
+venv/
+.venv/
+env/
+ 
+# Results (large files — commit selectively)
+results/checkpoints/*.pt
+results/plots/*.png
+results/training_history.json
+results/eval_summary.json
+ 
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+ 
+# PyTorch
+*.pth
+ 
+# OS
+.DS_Store
+Thumbs.db
+ 
+# IDE
+.vscode/
+.idea/
