@@ -10,7 +10,7 @@ from src.mcts.mcts import MCTS, MCTSNode
 from src.training.replay_buffer import ReplayBuffer
 
 
-# ── Game tests ──────────────────────────────────────────────────────────────
+# Game tests 
 
 class TestConnect4:
     def test_initial_state(self):
