@@ -6,7 +6,7 @@ An implementation of the **AlphaZero algorithm** applied to **Connect4**, built 
 
 ## What This Project Implements
 
-AlphaZero learns to play Connect4 by playing against itself, using the results to improve a neural network, and using that improved network to guide better search — a closed improvement loop with no human knowledge beyond the rules.
+AlphaZero learns to play Connect4 by playing against itself, using the results to improve a neural network, and using that improved network to guide better search a closed improvement loop with no human knowledge beyond the rules.
 
 | Component | Description |
 |---|---|
