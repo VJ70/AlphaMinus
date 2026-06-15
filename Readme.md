@@ -1,4 +1,5 @@
-# AlphaMinus (REFER: https://doi.org/10.5281/zenodo.20679987)
+# AlphaMinus  
+(https://doi.org/10.5281/zenodo.20679987)
 
 An implementation of the **AlphaZero algorithm** applied to **Connect4**, built from scratch in PyTorch. This project implements the complete self-play reinforcement learning pipeline: Monte Carlo Tree Search guided by a residual neural network, trained entirely through self-play with no human data.  
 
